@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                sh 'mkdir newDir'
+                // sh 'mkdir newDir'
                 sh 'touch newestfile.txt'
                 sh 'ls'
             }
