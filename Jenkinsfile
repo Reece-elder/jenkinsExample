@@ -4,7 +4,7 @@
 pipeline {
     agent any // What node you're using, don't bother editing
 
-    environmnet {
+    environment {
         string = credentials('testString')
     }
 
