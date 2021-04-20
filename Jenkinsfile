@@ -44,5 +44,29 @@ pipeline {
                 sh './scripts/test.sh'
             }
         }
+
+        stage('build') {
+            steps {
+                sh "build"
+            }
+        }
+
+        stage('test') {
+            steps {
+                sh "test"
+            }
+        }
+
+        stage('push') {
+            steps {
+                sh "push"
+            }
+        }
+
+        stage('deploy') {
+            steps {
+                sh "deploy"
+            }
+        }
     }
 }
