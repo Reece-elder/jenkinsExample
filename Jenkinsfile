@@ -40,8 +40,8 @@ pipeline {
 
         stage('runScript'){
             steps {
-                sh 'chmod +x test.sh'
-                sh '. test.sh'
+                sh 'chmod +x ./scripts/test.sh'
+                sh './scripts/test.sh'
             }
         }
     }
