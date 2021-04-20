@@ -33,9 +33,15 @@ pipeline {
                 sh 'ls'
                 sh 'pwd'
                 sh 'mkdir newDir'
-                sh 'cd newDir'
                 sh 'touch newestfile.txt'
                 sh 'ls'
+            }
+        }
+
+        stage('runScript'){
+            steps {
+                sh 'chmod +x test.sh'
+                sh '.tesh.sh'
             }
         }
     }
