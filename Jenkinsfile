@@ -6,6 +6,7 @@ pipeline {
 
     environment {
         string = credentials('testString')
+        gitCreds = credentials('gitCreds')
     }
 
     stages { // Collection of stages for this pipeline
@@ -21,6 +22,9 @@ pipeline {
         stage('printCredential') {
             steps {
                 sh 'echo $string'
+                sh 'echo $gitCreds'
+                sh 'echo $gitCreds_USR'
+                sh 'echo $gitCreds_PW'
             }
         }
     }
