@@ -27,5 +27,16 @@ pipeline {
                 sh 'echo $gitCreds_PW'
             }
         }
+
+        stage('jenkinsActions') {
+            steps {
+                sh 'ls'
+                sh 'pwd'
+                sh 'mkdir newDir'
+                sh 'cd newDir'
+                sh 'touch newestfile.txt'
+                sh 'ls'
+            }
+        }
     }
 }
